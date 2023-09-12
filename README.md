@@ -1,1 +1,2 @@
 # Snake_game
+Experience the Snake Game Project, a technical feat in game development. Built using HTML5, JavaScript, and the Canvas API, this project tackled challenges like game logic, UI design, animation, event handling, and audio integration. Explore the fusion of coding and design, offering players an engaging and challenging gaming experience. Dive into the world of web-based gaming and witness the mastery of JavaScript, all wrapped up in this classic Snake Game.
