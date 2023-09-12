@@ -14,7 +14,8 @@
     font-family: "Permanent Marker", cursive;
     font-size: 100px;
     display: flex;
-    justify-content: center; /* Horizontally center the container */
+    justify-content: left; /* Horizontally center the container */
+
     
 }
 #resetBtn{
@@ -106,4 +107,43 @@ body {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+
+#canvas-container {
+    position: relative;
+}
+
+.move-button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#upBtn {
+    bottom: 60px; /* Adjust the distance from the canvas as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#downBtn {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#leftBtn {
+    bottom: 30px; /* Adjust the distance from the canvas as needed */
+    left: 35%; /* Adjust the left position for centering */
+}
+
+#rightBtn {
+    bottom: 30px; /* Adjust the distance from the canvas as needed */
+    left: 55%; /* Adjust the left position for centering */
 }

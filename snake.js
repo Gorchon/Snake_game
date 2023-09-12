@@ -15,6 +15,12 @@ let yVelocity = 0; // we do this so that the snake doesn't move up or down by de
 let foodX;
 let foodY; 
 let score = 0;
+// Add event listeners for directional buttons
+const upButton = document.querySelector("#upBtn");
+const downButton = document.querySelector("#downBtn");
+const leftButton = document.querySelector("#leftBtn");
+const rightButton = document.querySelector("#rightBtn");
+
 // now our snake is an array of objects
 // this is our snake
 let snake = [
@@ -29,6 +35,11 @@ let snake = [
 
 window.addEventListener("keydown", changeDirection); // 
 resetBtn.addEventListener("click", resetGame);
+upButton.addEventListener("click", () => changeDirectionByKey(38)); // Simulate key press for up arrow (keyCode 38)
+downButton.addEventListener("click", () => changeDirectionByKey(40)); // Simulate key press for down arrow (keyCode 40)
+leftButton.addEventListener("click", () => changeDirectionByKey(37)); // Simulate key press for left arrow (keyCode 37)
+rightButton.addEventListener("click", () => changeDirectionByKey(39)); // Simulate key press for right arrow (keyCode 39)
+
 
 gameStart();
 
@@ -104,6 +115,11 @@ function drawSnake() {
         ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
     });
 };
+function changeDirectionByKey(keyCode) {
+    // Simulate key press based on the button clicks
+    const event = new KeyboardEvent("keydown", { keyCode: keyCode });
+    window.dispatchEvent(event);
+}
 function  changeDirection(event) {
     const keyPressed = event.keyCode; // keyCode is a property of the event object, it returns the unicode of the key that was pressed
     console.log(keyPressed);
